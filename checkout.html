@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +12,77 @@
 
     <h2>Checkout</h2>
 
-    <!-- checkout form -->
+    <form action="success.html" method="get">
+        <div>
+            <label>First name:</label>
+            <input type="text" name="sender_first_name" required>
+        </div>
+        <div>
+            <label>Last name:</label>
+            <input type="text" name="sender_last_name" required>
+        </div>
+        <div>
+            <label>Email:</label>
+            <input type="email" name="sender_email" required>
+        </div>
+        <div>
+            <label>Phone:</label>
+            <input type="tel" name="sender_phone" required>
+        </div>
+        <div>
+            <label>Adress:</label>
+            <input type="text" name="sender_address_line_1" required>
+        </div>
+        <div>
+            <label>Adress 2:</label>
+            <input type="text" name="sender_address_line_2">
+        </div>
+        <div>
+            <label>City:</label>
+            <input type="text" name="sender_city" required>
+        </div>
+        <div>
+            <label>Zip:</label>
+            <input type="text" name="sender_zip" required>
+        </div>
+        <div>
+            <label>Country</label>
+                <select name="dropdown" id="sender_country" required>
+                    <option value="" disabled selected>Please choose...</option>
+                    <option value="hr">Croatia</option>
+                    <option value="rs">Serbia</option>
+                    <option value="ba">Chezch Republic</option>
+                    <option value="si">Slovenia</option>
+                    <option value="me">Germany</option>
+                </select>
+        </div>
+        <div>
+            <label>Payment method:</label>
+            <select name="dropdown" id="payment_method" required>
+                <option value="" disabled selected>Please choose...</option>
+                <option value="credit">Credit</option>
+                <option value="debit">Debit</option>
+                <option value="paypal">PayPal</option>
+            </select>
+        </div>
+        <div>
+            <label>Payment card hold:</label>
+            <input type="text" name="payment_card_hold" required>
+        </div>
+        <div>
+            <label>Payment card number:</label>
+            <input type="text" name="payment_card_number" minlength="16" maxlength="16" inputmode="numeric" pattern="[0-9]" required>
+        </div>
+        <!---Korisnik moze upisati slova ali nece se moci poslati.
+        Ako stavim number, brisu se pocetne nule i imam strijelice sa strane-->
+        <div>
+            <label>Payment card expiration month:</label>
+            <input type="month" name="payment_card_expiration_month" min="2025-06" placeholder="MM/YY" required>
+        </div>
+        <!--Ne mogu promjeniti godinu osim rucno-->
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
 </body>
 </html>
